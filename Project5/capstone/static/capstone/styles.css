@@ -1,0 +1,78 @@
+body {
+  padding-bottom: 50px;
+}
+nav {
+  width: 100%;
+}
+.social-part .fa {
+  padding-right: 20px;
+  text-align: right;
+}
+nav ul li a {
+  margin-right: 20px;
+  text-align: left;
+}
+li {
+  float: left;
+}
+/* Popup container */
+.likePopup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+/* Actual popup */
+.likepopup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #3333ff;
+  color: #cc0000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+/* Popup arrow */
+.likepopup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #3333ff transparent transparent transparent;
+}
+/* Toggle class when popup container clicked on */
+.likepopup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+/* Animation */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.blog_content {
+  postion: relative;
+  overflow: hidden;
+  min-height: 200px;
+  border: solid 1px #ccc;
+  rows: 30%;
+  cols: 80%;
+}
+
+[contenteditable] {
+  border: 1px solid;
+}
+
+.AboutEditForm {
+  align-self: center;
+  padding-left: 10px;
+}

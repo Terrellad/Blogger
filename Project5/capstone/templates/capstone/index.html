@@ -1,0 +1,38 @@
+{% extends "capstone/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="Main">
+      <input type="hidden" id="UserId" value="{{ request.user.id }}">
+      <div contenteditable="true">Test textarea with image.
+        <img src="https://webstockreview.net/images/cone-clipart-traffic-cone-4.jpg" width="15" height="15" />
+      </div>
+    </div>
+
+    <div id="Catagory_Post">
+    </div>
+
+    <div id="Post">
+      </div>
+
+    <div id="About">
+    </div>
+
+    <div id="New_Comment">
+      {{ message_comment }}
+      <form id="Blogform">
+        <input type="hidden" id="ViewerId" value="{{ request.user.id }}">
+        <input type="hidden" id="BlogViewer" value="{{ request.user.username }}">
+        <textarea id="BlogCommentText" class="textstyle" placeholder="Tell me what you think!"></textarea><br>
+        <button class="btn btn-outline-info btn-sm" id="Blog">Post</button>
+      </form>
+    </div>
+
+    <div id="Blog_Comment">
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'capstone/index.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "capstone/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="NewBlog">
+      <form id="Blogform">
+        <div>
+          <input type="hidden" id="blogUserID" value="{{ request.user.id }}">
+          <input type="hidden" id="blogUserName" value="{{ request.user.username }}">
+          <input type="text" id="BlogTitle" name="title" placeholder="New Blog Title.">
+        </div>
+        <br>
+        <div>
+          <textarea id="BlogContent" class="blog_content" placeholder="Start creating here!"></textarea>
+        </div>
+        <br>
+        <div>
+          <label for="Catagory">Enter one catagory please.</label><br>
+          <input type="text" id="Catagory" name="catagory">
+        </div>
+        <br>
+        <button class="btn btn-sm btn-outline-secondary" id="BlogPost">Save Post</button>
+      </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'capstone/index.js' %}"></script>
+{% endblock %}
